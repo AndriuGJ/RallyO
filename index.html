@@ -1,61 +1,219 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#070809" name="theme-color"/>
-<title>APEX RALLY — Más allá del límite</title>
-<meta content="Un recorrido cinematográfico por el mundo del rally. Velocidad, precisión y terrenos imposibles." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/style.css" rel="stylesheet"/>
-<script defer="" src="js/app.js"></script>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#070809" name="theme-color" />
+    <title>APEX RALLY — Más allá del límite</title>
+    <meta content="Un recorrido cinematográfico por el mundo del rally. Velocidad, precisión y terrenos imposibles."
+        name="description" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&amp;family=DM+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script defer="" src="js/app.js"></script>
 </head>
+
 <body>
-<div aria-hidden="true" class="loader" id="loader"><div class="loader-inner"><span class="brand-symbol">A<span>✦</span></span><span class="loading-bar"><i></i></span><span class="loader-caption">PREPARANDO LA SALIDA</span></div></div>
-<div aria-hidden="true" class="cursor-glow" id="cursorGlow"></div>
-<header class="topbar" id="topbar">
-<a aria-label="APEX Rally, inicio" class="logo" href="#inicio"><span class="logo-mark">A<span class="logo-slash">/</span></span><span class="logo-text">APEX<small>RALLY DIVISION</small></span></a>
-<nav aria-label="Navegación principal" class="desktop-nav"><a href="#filosofia">EL ESPÍRITU</a><a href="#maquinas">MÁQUINAS</a><a href="#terrenos">TERRENOS</a><a href="#pilotos">EL PILOTO</a><a href="#historias">HISTORIAS</a></nav>
-<button aria-expanded="false" aria-label="Abrir menú" class="menu-trigger" id="menuTrigger"><span>MENÚ</span><span class="hamburger"><i></i><i></i></span></button>
-</header>
-<div aria-hidden="true" class="menu-overlay" id="menuOverlay"><nav aria-label="Menú móvil"><a href="#inicio">01 <strong>INICIO</strong></a><a href="#filosofia">02 <strong>EL ESPÍRITU</strong></a><a href="#maquinas">03 <strong>MÁQUINAS</strong></a><a href="#terrenos">04 <strong>TERRENOS</strong></a><a href="#pilotos">05 <strong>EL PILOTO</strong></a><a href="#historias">06 <strong>HISTORIAS</strong></a></nav><span class="menu-bottom">NACIDOS PARA IR MÁS LEJOS · EST. 2026</span></div>
-<main>
-<section aria-label="Portada" class="hero" id="inicio">
-<div class="hero-media hero-fallback" style="--bg:url('https://dirtfish-editorial.s3-accelerate.amazonaws.com/2020/09/Evans05TUR20cm678.jpg')"></div>
-<video aria-hidden="true" autoplay="" class="hero-video" id="heroVideo" loop="" muted="" playsinline="" preload="metadata"><source src="video/cortometraje.mp4" type="video/mp4"/></video>
-<audio id="heroAudio" src="video/Sonido_car.mpeg" loop preload="auto" muted aria-hidden="true"></audio>
-<div class="hero-shade"></div>
-<div class="hero-serial">AR / 001 — THE RALLY EXPERIENCE</div>
-<div class="hero-content"><p class="eyebrow reveal-hero"><span class="red-line"></span> NO HAY CAMINOS. SOLO LÍMITES.</p><h1 class="hero-title reveal-hero">FEEL THE<br/><em>UNLIMITED.</em></h1><p class="hero-subtitle reveal-hero">El control absoluto empieza donde termina el asfalto.</p><a class="outline-btn reveal-hero" href="#filosofia"><span>DESCUBRE EL UNIVERSO RALLY</span><span class="btn-arrow">↗</span></a></div>
-<div class="hero-bottom"><span>01 <i></i> 06</span><a href="#filosofia">DESLIZA PARA EXPLORAR <span class="scroll-arrow">↓</span></a><span>VELOCIDAD EN ESTADO PURO</span></div>
-<div class="side-caption">BUILT FOR THE EXTREME — APEX RALLY</div>
-<button aria-label="Activar sonido de fondo" class="video-toggle" id="videoToggle" title="Activar sonido" type="button"><span aria-hidden="true" class="video-toggle-icon">♪</span></button>
-</section>
-<section class="manifesto section-space" id="filosofia"><div class="section-head reveal"><span class="section-index">01 / EL ESPÍRITU</span><span class="section-rule"></span><span class="section-end">LA OBSESIÓN POR IR MÁS ALLÁ</span></div><div class="manifesto-main"><p class="overline reveal">NO ES SOLO UNA CARRERA</p><h2 class="giant-statement reveal">NO SE TRATA<br/>DE <span class="outline-text">LLEGAR.</span><br/>SE TRATA DE<br/><em>SENTIR.</em></h2><div class="manifesto-bottom reveal"><span class="cross-symbol">✳</span><p>Cada curva exige valentía. Cada segundo requiere precisión. Cada kilómetro escribe una historia. Esto es Rally: donde el piloto y la máquina se convierten en uno.</p></div></div></section>
-<section class="feature-section" id="maquinas"><video aria-hidden="true" autoplay="" class="feature-backdrop parallax-media cinematic-video" loop="" muted="" playsinline="" preload="metadata"><source src="video/maquinas.mp4" type="video/mp4"/></video><div class="feature-overlay"></div><div class="feature-top reveal"><span>02 / LAS MÁQUINAS</span><span>INGENIERÍA SIN CONCESIONES</span></div><div class="feature-copy reveal"><p class="overline">HECHAS PARA LO IMPOSIBLE</p><h2>DOMINA<br/><em>EL CAOS.</em></h2><p>Potencia, tracción y precisión. Las máquinas más extremas desafían los terrenos más salvajes.</p><a class="outline-btn" href="#coleccion"><span>EXPLORAR LA COLECCIÓN</span><span class="btn-arrow">↗</span></a></div><div class="feature-bottom">RALLY SPECIFICATION <span>↘</span> 4WD / FULL SEND</div></section>
-<section class="collection section-space" id="coleccion"><div class="section-head reveal"><span class="section-index">03 / LA COLECCIÓN</span><span class="section-rule"></span><span class="section-end">ICONOS DE LA COMPETICIÓN</span></div><div class="section-intro reveal"><div><p class="overline">THE GARAGE</p><h2>ADRENALINA<br/><span>EN CADA DETALLE.</span></h2></div><p>Sin concesiones. Sin atajos. Una nueva forma de descubrir las máquinas que desafían la gravedad.</p></div><div class="vehicle-grid"><a class="vehicle-card reveal" href="#terrenos"><div class="vehicle-image" style="background-image:url('https://dirtfish-editorial.s3-accelerate.amazonaws.com/2020/09/Evans05TUR20cm678.jpg')"></div><span class="vehicle-number">01 — GRAVEL</span><div class="vehicle-content"><span>LA ESENCIA</span><h3>TIERRA</h3><span class="vehicle-go">↗</span></div></a><a class="vehicle-card reveal" href="#terrenos"><div class="vehicle-image" style="background-image:url('https://cdn-image.as-web.jp/2026/08/01124643/EVANS10FIN26tb311.jpg')"></div><span class="vehicle-number">02 — PERFORMANCE</span><div class="vehicle-content"><span>LA VELOCIDAD</span><h3>PRECISIÓN</h3><span class="vehicle-go">↗</span></div></a><a class="vehicle-card reveal" href="#terrenos"><div class="vehicle-image" style="background-image:url('https://cdn-cpfgb.nitrocdn.com/dRxFEBZBvMUrSIsoXplluqPbGwZVXSCF/assets/images/optimized/rev-f055e05/dirtfish-editorial.s3-accelerate.amazonaws.com/2021/03/A56I6754.jpg')"></div><span class="vehicle-number">03 — WILD</span><div class="vehicle-content"><span>EL INSTINTO</span><h3>SIN LÍMITES</h3><span class="vehicle-go">↗</span></div></a><a class="vehicle-card reveal" href="#historias"><div class="vehicle-image" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1400&amp;q=85')"></div><span class="vehicle-number">04 — NIGHT STAGE</span><div class="vehicle-content"><span>LO DESCONOCIDO</span><h3>NOCTURNO</h3><span class="vehicle-go">↗</span></div></a></div></section>
-<section class="terrain-section" id="terrenos"><video aria-hidden="true" autoplay="" class="terrain-image parallax-media cinematic-video" loop="" muted="" playsinline="" preload="metadata"><source src="video/terrenos.mp4" type="video/mp4"/></video><div class="terrain-shade"></div><div class="terrain-copy reveal"><p class="overline">04 / MÁS ALLÁ DEL ASFALTO</p><h2>LA RUTA<br/><em>LA ESCRIBES<br/>TÚ.</em></h2><p>Polvo. Barro. Grava. Nieve. El terreno cambia. La pasión nunca.</p><a class="outline-btn" href="#historias"><span>VIVE LA EXPERIENCIA</span><span class="btn-arrow">↗</span></a></div><span class="terrain-counter">NO ROADS / NO RULES / JUST RALLY</span></section>
-<section class="pilots section-space" id="pilotos">
-<div class="section-head reveal"><span class="section-index">05 / EL PILOTO</span><span class="section-rule"></span><span class="section-end">PASIÓN DETRÁS DEL VOLANTE</span></div>
-<div class="pilot-feature reveal">
-<div class="pilot-feature-image"><img alt="Piloto Orlandini junto a su Mitsubishi de rally" loading="lazy" src="img/Orlandini.png"/></div>
-<div class="pilot-feature-overlay"></div>
-<div class="pilot-feature-copy">
-<p class="overline">THE DRIVER / ORLANDINI RACING</p>
-<h2>ESPÍRITU<br/><em>DE RALLY.</em></h2>
-<div class="pilot-feature-rule"></div>
-<span class="pilot-feature-name">ORLANDINI <span>×</span> MITSUBISHI</span>
-<p>Una misma pasión. Un piloto, su máquina y la búsqueda constante del límite.</p>
-</div>
-<div class="pilot-feature-serial">01 / EL PROTAGONISTA</div>
-</div>
-</section>
-<section class="stories section-space" id="historias"><div class="section-head reveal"><span class="section-index">06 / HISTORIAS</span><span class="section-rule"></span><span class="section-end">MOMENTOS QUE DEJAN HUELLA</span></div><div class="section-intro reveal"><div><p class="overline">BEYOND THE RACE</p><h2>LA VIDA A<br/><span>TODO MOTOR.</span></h2></div></div><div class="story-grid"><article class="story-card reveal"><div class="story-img" style="background-image:url('https://cdn-image.as-web.jp/2026/08/01124643/EVANS10FIN26tb311.jpg')"></div><span>01 / LA COMPETICIÓN</span><h3>UN SEGUNDO PUEDE CAMBIARLO TODO.</h3><p>La línea entre la victoria y el límite.</p></article><article class="story-card reveal"><div class="story-img" style="background-image:url('https://cdn-cpfgb.nitrocdn.com/dRxFEBZBvMUrSIsoXplluqPbGwZVXSCF/assets/images/optimized/rev-f055e05/dirtfish-editorial.s3-accelerate.amazonaws.com/2021/03/A56I6754.jpg')"></div><span>02 / LA PASIÓN</span><h3>UN DEPORTE QUE SE SIENTE.</h3><p>Donde el motor habla más que las palabras.</p></article><article class="story-card reveal"><div class="story-img" style="background-image:url('https://dirtfish-editorial.s3-accelerate.amazonaws.com/2020/09/Evans05TUR20cm678.jpg')"></div><span>03 / EL CAMINO</span><h3>NINGÚN TERRENO ES IGUAL.</h3><p>La aventura empieza después de la última curva.</p></article></div></section>
-<section class="closing"><span class="closing-overline reveal">EL RALLY NO SE EXPLICA. SE VIVE.</span><h2 class="reveal">CHASE THE<br/><em>IMPOSSIBLE.</em></h2><a class="back-top reveal" href="#inicio">VOLVER AL INICIO <span>↑</span></a></section>
-</main>
-<footer><div class="footer-brand">APEX<span>/</span></div><div class="footer-column"><span>EXPLORAR</span><a href="#filosofia">EL ESPÍRITU</a><a href="#maquinas">MÁQUINAS</a><a href="#terrenos">TERRENOS</a><a href="#pilotos">EL PILOTO</a><a href="#historias">HISTORIAS</a></div><div class="footer-column"><span>INFORMACIÓN</span><p>Concepto editorial inspirado en el mundo del Rally.</p><p>Las imágenes son referencias visuales externas.</p></div><div class="footer-final"><span>© 2026 APEX RALLY — CONCEPTO WEB</span><span>DESIGN FOR THE FEARLESS ↗</span></div></footer>
+    <div aria-hidden="true" class="loader" id="loader">
+        <div class="loader-inner"><span class="brand-symbol">A<span>✦</span></span><span
+                class="loading-bar"><i></i></span><span class="loader-caption">PREPARANDO LA SALIDA</span></div>
+    </div>
+    <div aria-hidden="true" class="cursor-glow" id="cursorGlow"></div>
+    <header class="topbar" id="topbar">
+        <a aria-label="APEX Rally, inicio" class="logo" href="#inicio"><span class="logo-mark">A<span
+                    class="logo-slash">/</span></span><span class="logo-text">APEX<small>RALLY
+                    DIVISION</small></span></a>
+        <nav aria-label="Navegación principal" class="desktop-nav"><a href="#filosofia">EL ESPÍRITU</a><a
+                href="#maquinas">MÁQUINAS</a><a href="#terrenos">TERRENOS</a><a href="#pilotos">EL PILOTO</a><a
+                href="#historias">HISTORIAS</a></nav>
+        <button aria-expanded="false" aria-label="Abrir menú" class="menu-trigger"
+            id="menuTrigger"><span>MENÚ</span><span class="hamburger"><i></i><i></i></span></button>
+    </header>
+    <div aria-hidden="true" class="menu-overlay" id="menuOverlay">
+        <nav aria-label="Menú móvil"><a href="#inicio">01 <strong>INICIO</strong></a><a href="#filosofia">02 <strong>EL
+                    ESPÍRITU</strong></a><a href="#maquinas">03 <strong>MÁQUINAS</strong></a><a href="#terrenos">04
+                <strong>TERRENOS</strong></a><a href="#pilotos">05 <strong>EL PILOTO</strong></a><a href="#historias">06
+                <strong>HISTORIAS</strong></a></nav><span class="menu-bottom">NACIDOS PARA IR MÁS LEJOS · EST.
+            2026</span>
+    </div>
+    <main>
+        <section aria-label="Portada" class="hero" id="inicio">
+            <div class="hero-media hero-fallback"
+                style="--bg:url('https://dirtfish-editorial.s3-accelerate.amazonaws.com/2020/09/Evans05TUR20cm678.jpg')">
+            </div>
+            <video aria-hidden="true" autoplay="" class="hero-video" id="heroVideo" loop="" muted="" playsinline=""
+                preload="metadata">
+                <source src="video/cortometraje.mp4" type="video/mp4" />
+            </video>
+            <audio id="heroAudio" src="video/vid1.mp4" loop preload="auto" muted aria-hidden="true"></audio>
+            <div class="hero-shade"></div>
+            <div class="hero-serial">AR / 001 — THE RALLY EXPERIENCE</div>
+            <div class="hero-content">
+                <p class="eyebrow reveal-hero"><span class="red-line"></span> NO HAY CAMINOS. SOLO LÍMITES.</p>
+                <h1 class="hero-title reveal-hero">FEEL THE<br /><em>UNLIMITED.</em></h1>
+                <p class="hero-subtitle reveal-hero">El control absoluto empieza donde termina el asfalto.</p><a
+                    class="outline-btn reveal-hero" href="#filosofia"><span>DESCUBRE EL UNIVERSO RALLY</span><span
+                        class="btn-arrow">↗</span></a>
+            </div>
+            <div class="hero-bottom"><span>01 <i></i> 06</span><a href="#filosofia">DESLIZA PARA EXPLORAR <span
+                        class="scroll-arrow">↓</span></a><span>VELOCIDAD EN ESTADO PURO</span></div>
+            <div class="side-caption">BUILT FOR THE EXTREME — APEX RALLY</div>
+            <button aria-label="Activar sonido de fondo" class="video-toggle" id="videoToggle" title="Activar sonido"
+                type="button"><span aria-hidden="true" class="video-toggle-icon">♪</span></button>
+        </section>
+        <section class="manifesto section-space" id="filosofia">
+            <div class="section-head reveal"><span class="section-index">01 / EL ESPÍRITU</span><span
+                    class="section-rule"></span><span class="section-end">LA OBSESIÓN POR IR MÁS ALLÁ</span></div>
+            <div class="manifesto-main">
+                <p class="overline reveal">NO ES SOLO UNA CARRERA</p>
+                <h2 class="giant-statement reveal">NO SE TRATA<br />DE <span class="outline-text">LLEGAR.</span><br />SE
+                    TRATA DE<br /><em>SENTIR.</em></h2>
+                <div class="manifesto-bottom reveal"><span class="cross-symbol">✳</span>
+                    <p>Cada curva exige valentía. Cada segundo requiere precisión. Cada kilómetro escribe una historia.
+                        Esto es Rally: donde el piloto y la máquina se convierten en uno.</p>
+                </div>
+            </div>
+        </section>
+        <section class="feature-section" id="maquinas"><video aria-hidden="true" autoplay=""
+                class="feature-backdrop parallax-media cinematic-video" loop="" muted="" playsinline=""
+                preload="metadata">
+                <source src="video/maquinas.mp4" type="video/mp4" />
+            </video>
+            <div class="feature-overlay"></div>
+            <div class="feature-top reveal"><span>02 / LAS MÁQUINAS</span><span>INGENIERÍA SIN CONCESIONES</span></div>
+            <div class="feature-copy reveal">
+                <p class="overline">HECHAS PARA LO IMPOSIBLE</p>
+                <h2>DOMINA<br /><em>EL CAOS.</em></h2>
+                <p>Potencia, tracción y precisión. Las máquinas más extremas desafían los terrenos más salvajes.</p><a
+                    class="outline-btn" href="#coleccion"><span>EXPLORAR LA COLECCIÓN</span><span
+                        class="btn-arrow">↗</span></a>
+            </div>
+            <div class="feature-bottom">RALLY SPECIFICATION <span>↘</span> 4WD / FULL SEND</div>
+        </section>
+        <section class="collection section-space" id="coleccion">
+            <div class="section-head reveal"><span class="section-index">03 / LA COLECCIÓN</span><span
+                    class="section-rule"></span><span class="section-end">ICONOS DE LA COMPETICIÓN</span></div>
+            <div class="section-intro reveal">
+                <div>
+                    <p class="overline">THE GARAGE</p>
+                    <h2>ADRENALINA<br /><span>EN CADA DETALLE.</span></h2>
+                </div>
+                <p>Sin concesiones. Sin atajos. Una nueva forma de descubrir las máquinas que desafían la gravedad.</p>
+            </div>
+            <div class="vehicle-grid"><a class="vehicle-card reveal" href="#terrenos">
+                    <div class="vehicle-image"
+                        style="background-image:url('https://dirtfish-editorial.s3-accelerate.amazonaws.com/2020/09/Evans05TUR20cm678.jpg')">
+                    </div><span class="vehicle-number">01 — GRAVEL</span>
+                    <div class="vehicle-content"><span>LA ESENCIA</span>
+                        <h3>TIERRA</h3><span class="vehicle-go">↗</span>
+                    </div>
+                </a><a class="vehicle-card reveal" href="#terrenos">
+                    <div class="vehicle-image"
+                        style="background-image:url('https://cdn-image.as-web.jp/2026/08/01124643/EVANS10FIN26tb311.jpg')">
+                    </div><span class="vehicle-number">02 — PERFORMANCE</span>
+                    <div class="vehicle-content"><span>LA VELOCIDAD</span>
+                        <h3>PRECISIÓN</h3><span class="vehicle-go">↗</span>
+                    </div>
+                </a><a class="vehicle-card reveal" href="#terrenos">
+                    <div class="vehicle-image"
+                        style="background-image:url('https://cdn-cpfgb.nitrocdn.com/dRxFEBZBvMUrSIsoXplluqPbGwZVXSCF/assets/images/optimized/rev-f055e05/dirtfish-editorial.s3-accelerate.amazonaws.com/2021/03/A56I6754.jpg')">
+                    </div><span class="vehicle-number">03 — WILD</span>
+                    <div class="vehicle-content"><span>EL INSTINTO</span>
+                        <h3>SIN LÍMITES</h3><span class="vehicle-go">↗</span>
+                    </div>
+                </a><a class="vehicle-card reveal" href="#historias">
+                    <div class="vehicle-image"
+                        style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1400&amp;q=85')">
+                    </div><span class="vehicle-number">04 — NIGHT STAGE</span>
+                    <div class="vehicle-content"><span>LO DESCONOCIDO</span>
+                        <h3>NOCTURNO</h3><span class="vehicle-go">↗</span>
+                    </div>
+                </a></div>
+        </section>
+        <section class="terrain-section" id="terrenos"><video aria-hidden="true" autoplay=""
+                class="terrain-image parallax-media cinematic-video" loop="" muted="" playsinline="" preload="metadata">
+                <source src="video/terrenos.mp4" type="video/mp4" />
+            </video>
+            <div class="terrain-shade"></div>
+            <div class="terrain-copy reveal">
+                <p class="overline">04 / MÁS ALLÁ DEL ASFALTO</p>
+                <h2>LA RUTA<br /><em>LA ESCRIBES<br />TÚ.</em></h2>
+                <p>Polvo. Barro. Grava. Nieve. El terreno cambia. La pasión nunca.</p><a class="outline-btn"
+                    href="#historias"><span>VIVE LA EXPERIENCIA</span><span class="btn-arrow">↗</span></a>
+            </div><span class="terrain-counter">NO ROADS / NO RULES / JUST RALLY</span>
+        </section>
+        <section class="pilots section-space" id="pilotos">
+            <div class="section-head reveal"><span class="section-index">05 / EL PILOTO</span><span
+                    class="section-rule"></span><span class="section-end">PASIÓN DETRÁS DEL VOLANTE</span></div>
+            <div class="pilot-feature reveal">
+                <div class="pilot-feature-image"><img alt="Piloto Orlandini junto a su Mitsubishi de rally"
+                        loading="lazy" src="img/Orlandini.png" /></div>
+                <div class="pilot-feature-overlay"></div>
+                <div class="pilot-feature-copy">
+                    <p class="overline">THE DRIVER / ORLANDINI RACING</p>
+                    <h2>ESPÍRITU<br /><em>DE RALLY.</em></h2>
+                    <div class="pilot-feature-rule"></div>
+                    <span class="pilot-feature-name">ORLANDINI <span>×</span> MITSUBISHI</span>
+                    <p>Una misma pasión. Un piloto, su máquina y la búsqueda constante del límite.</p>
+                </div>
+                <div class="pilot-feature-serial">01 / EL PROTAGONISTA</div>
+            </div>
+        </section>
+        <section class="stories section-space" id="historias">
+            <div class="section-head reveal"><span class="section-index">06 / HISTORIAS</span><span
+                    class="section-rule"></span><span class="section-end">MOMENTOS QUE DEJAN HUELLA</span></div>
+            <div class="section-intro reveal">
+                <div>
+                    <p class="overline">BEYOND THE RACE</p>
+                    <h2>LA VIDA A<br /><span>TODO MOTOR.</span></h2>
+                </div>
+            </div>
+            <div class="story-grid">
+                <article class="story-card reveal">
+                    <div class="story-img"
+                        style="background-image:url('https://cdn-image.as-web.jp/2026/08/01124643/EVANS10FIN26tb311.jpg')">
+                    </div><span>01 / LA COMPETICIÓN</span>
+                    <h3>UN SEGUNDO PUEDE CAMBIARLO TODO.</h3>
+                    <p>La línea entre la victoria y el límite.</p>
+                </article>
+                <article class="story-card reveal">
+                    <div class="story-img"
+                        style="background-image:url('https://cdn-cpfgb.nitrocdn.com/dRxFEBZBvMUrSIsoXplluqPbGwZVXSCF/assets/images/optimized/rev-f055e05/dirtfish-editorial.s3-accelerate.amazonaws.com/2021/03/A56I6754.jpg')">
+                    </div><span>02 / LA PASIÓN</span>
+                    <h3>UN DEPORTE QUE SE SIENTE.</h3>
+                    <p>Donde el motor habla más que las palabras.</p>
+                </article>
+                <article class="story-card reveal">
+                    <div class="story-img"
+                        style="background-image:url('https://dirtfish-editorial.s3-accelerate.amazonaws.com/2020/09/Evans05TUR20cm678.jpg')">
+                    </div><span>03 / EL CAMINO</span>
+                    <h3>NINGÚN TERRENO ES IGUAL.</h3>
+                    <p>La aventura empieza después de la última curva.</p>
+                </article>
+            </div>
+        </section>
+        <section class="closing"><span class="closing-overline reveal">EL RALLY NO SE EXPLICA. SE VIVE.</span>
+            <h2 class="reveal">CHASE THE<br /><em>IMPOSSIBLE.</em></h2><a class="back-top reveal" href="#inicio">VOLVER
+                AL INICIO <span>↑</span></a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-brand">APEX<span>/</span></div>
+        <div class="footer-column"><span>EXPLORAR</span><a href="#filosofia">EL ESPÍRITU</a><a
+                href="#maquinas">MÁQUINAS</a><a href="#terrenos">TERRENOS</a><a href="#pilotos">EL PILOTO</a><a
+                href="#historias">HISTORIAS</a></div>
+        <div class="footer-column"><span>INFORMACIÓN</span>
+            <p>Concepto editorial inspirado en el mundo del Rally.</p>
+            <p>Las imágenes son referencias visuales externas.</p>
+        </div>
+        <div class="footer-final"><span>© 2026 APEX RALLY — CONCEPTO WEB</span><span>DESIGN FOR THE FEARLESS ↗</span>
+        </div>
+    </footer>
 </body>
+
 </html>
