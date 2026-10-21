@@ -32,3 +32,64 @@
 .pilot-feature-copy>p:last-child{max-width:360px;color:#ddd;font-size:13px;line-height:1.8}
 .pilot-feature-serial{position:absolute;top:35px;right:35px;font-size:10px;font-weight:700;letter-spacing:2px}
 @media(max-width:650px){.cinematic-video{object-position:center}.pilot-feature{margin-top:34px;min-height:720px;height:85svh}.pilot-feature-image img{object-position:49% center}.pilot-feature-overlay{background:linear-gradient(0deg,#000e 0%,#0008 37%,transparent 70%)}.pilot-feature-copy{left:6%;right:6%;bottom:7%}.pilot-feature-copy h2{font-size:clamp(69px,15vw,105px)}.pilot-feature-serial{top:25px;right:20px;font-size:9px}.video-toggle{width:44px;height:44px;padding:0}}
+
+
+/* Piloto protagonista: imagen PNG transparente, sin tarjeta ni recortes */
+.pilots{background:#080808;padding-bottom:110px}
+.pilot-feature{
+  width:100%;
+  height:auto;
+  min-height:0;
+  margin:48px auto 0;
+  padding:0;
+  overflow:visible;
+  background:transparent;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.pilot-feature-image{
+  position:relative;
+  inset:auto;
+  display:flex;
+  justify-content:center;
+  width:100%;
+  height:auto;
+  background:transparent;
+}
+.pilot-feature-image img{
+  position:relative;
+  inset:auto;
+  display:block;
+  width:min(100%,1050px);
+  max-width:100%;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+  transition:transform 1.2s cubic-bezier(.2,.7,.2,1);
+}
+.pilot-feature-overlay{display:none}
+.pilot-feature-copy{
+  position:relative;
+  left:auto;
+  bottom:auto;
+  max-width:740px;
+  margin:24px auto 0;
+  padding:0 20px;
+  text-align:center;
+}
+.pilot-feature-copy h2{font-size:clamp(65px,9vw,130px)}
+.pilot-feature-rule{margin-left:auto;margin-right:auto}
+.pilot-feature-serial{
+  position:relative;
+  inset:auto;
+  margin:28px auto 0;
+}
+@media(max-width:650px){
+  .pilots{padding-bottom:70px}
+  .pilot-feature{margin-top:30px}
+  .pilot-feature-image img{width:100%;height:auto;object-fit:contain}
+  .pilot-feature-copy{padding:0 8px}
+  .pilot-feature-copy h2{font-size:clamp(60px,15vw,95px)}
+}
