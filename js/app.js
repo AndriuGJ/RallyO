@@ -41,14 +41,9 @@ if(heroVideo && heroAudio){
     if(videoToggle)videoToggle.title=soundOn?'Silenciar sonido':'Activar sonido';
   };
 
-  // Mantener alineado el inicio y los reinicios del video con el audio.
+  // Iniciar ambas pistas juntas, pero permitir que cada una repita por separado.
   heroVideo.addEventListener('play',()=>{
     if(heroAudio.paused)heroAudio.play().catch(()=>{});
-  });
-  heroVideo.addEventListener('seeking',()=>{
-    if(Number.isFinite(heroVideo.currentTime) && Number.isFinite(heroAudio.duration) && heroAudio.duration>0){
-      heroAudio.currentTime=heroVideo.currentTime%heroAudio.duration;
-    }
   });
   heroVideo.addEventListener('error',()=>{heroVideo.hidden=true});
   playTogether();
