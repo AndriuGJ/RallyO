@@ -93,3 +93,29 @@
   .pilot-feature-copy{padding:0 8px}
   .pilot-feature-copy h2{font-size:clamp(60px,15vw,95px)}
 }
+
+
+/* Presentación de Orlandini: marco sutil inclinado y tamaño contenido */
+.pilot-feature-image{
+  width:min(100%,670px);
+  padding:20px;
+  border:1px solid rgba(255,255,255,.18);
+  background:linear-gradient(145deg,#181818,#080808);
+  transform:rotate(-2deg);
+  box-shadow:0 25px 65px rgba(0,0,0,.35);
+  transition:transform .5s ease,border-color .5s ease;
+}
+.pilot-feature-image:hover{
+  transform:rotate(0deg);
+  border-color:rgba(255,255,255,.32);
+}
+.pilot-feature-image img{
+  width:100%;
+  height:auto;
+  transform:none;
+}
+.pilot-feature:hover .pilot-feature-image img{transform:none}
+@media(max-width:650px){
+  .pilot-feature-image{width:92%;padding:12px;transform:rotate(-1.5deg)}
+  .pilot-feature-image img{width:100%}
+}
