@@ -17,24 +17,67 @@ window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(scrollU
 const glow=document.getElementById('cursorGlow');
 window.addEventListener('pointermove',e=>{if(e.pointerType==='mouse'){glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'}},{passive:true});
 
-// Reproducción silenciosa en bucle para respetar las políticas de autoplay.
+// El video principal nunca emite sonido; la pista independiente corre en silencio
+// hasta que el visitante activa el icono. Al activarlo, se escucha desde su posición actual.
 const heroVideo=document.querySelector('#heroVideo');
+const heroAudio=document.querySelector('#heroAudio');
 const videoToggle=document.querySelector('#videoToggle');
-if(heroVideo){
+if(heroVideo && heroAudio){
   heroVideo.muted=true;
-  heroVideo.play().catch(()=>{});
-  heroVideo.addEventListener('error',()=>{heroVideo.hidden=true});
-  videoToggle?.addEventListener('click',()=>{
-    heroVideo.muted=!heroVideo.muted;
-    const soundOn=!heroVideo.muted;
-    videoToggle.querySelector('.video-toggle-icon').textContent=soundOn?'♫':'♪';
-    videoToggle.title=soundOn?'Silenciar video':'Activar sonido';
-    videoToggle.setAttribute('aria-label',soundOn?'Silenciar video':'Activar sonido del video');
+  heroAudio.muted=true;
+  heroAudio.loop=true;
+  let wantsAudio=false;
+
+  const playTogether=()=>{
     heroVideo.play().catch(()=>{});
+    heroAudio.play().catch(()=>{});
+  };
+  const updateSoundButton=()=>{
+    const soundOn=wantsAudio && !heroAudio.muted;
+    videoToggle?.querySelector('.video-toggle-icon')?.replaceChildren(
+      document.createTextNode(soundOn?'♫':'♪')
+    );
+    videoToggle?.setAttribute('aria-label',soundOn?'Silenciar sonido de fondo':'Activar sonido de fondo');
+    if(videoToggle)videoToggle.title=soundOn?'Silenciar sonido':'Activar sonido';
+  };
+
+  // Mantener alineado el inicio y los reinicios del video con el audio.
+  heroVideo.addEventListener('play',()=>{
+    if(heroAudio.paused)heroAudio.play().catch(()=>{});
+  });
+  heroVideo.addEventListener('seeking',()=>{
+    if(Number.isFinite(heroVideo.currentTime) && Number.isFinite(heroAudio.duration) && heroAudio.duration>0){
+      heroAudio.currentTime=heroVideo.currentTime%heroAudio.duration;
+    }
+  });
+  heroVideo.addEventListener('error',()=>{heroVideo.hidden=true});
+  playTogether();
+
+  videoToggle?.addEventListener('click',()=>{
+    wantsAudio=!wantsAudio;
+    heroAudio.muted=!wantsAudio;
+    // Los navegadores pueden impedir autoplay silencioso de <audio>; un clic lo habilita.
+    if(wantsAudio && heroAudio.paused){
+      const elapsed=heroVideo.currentTime||0;
+      if(Number.isFinite(heroAudio.duration) && heroAudio.duration>0){
+        heroAudio.currentTime=elapsed%heroAudio.duration;
+      }
+      heroAudio.play().catch(()=>{});
+    }
+    updateSoundButton();
+  });
+  heroAudio.addEventListener('error',()=>{
+    videoToggle?.setAttribute('title','No se pudo cargar el audio');
   });
   document.addEventListener('visibilitychange',()=>{
-    if(document.hidden)heroVideo.pause();else heroVideo.play().catch(()=>{});
+    if(document.hidden){
+      heroVideo.pause();
+      heroAudio.pause();
+    }else{
+      playTogether();
+    }
   });
+  updateSoundButton();
 }
 
 // Los videos de las secciones mantienen autoplay silencioso y reproducción en bucle.
